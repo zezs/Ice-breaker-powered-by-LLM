@@ -1,20 +1,13 @@
-"""
-Extra credits from proxycurl
-"""
+"""I have no money lol!
+   So wrote a Script to hit endpoints to earn extra credits on proxycurl"""
 
 import requests
 
 api_key = ''
 headers = {'Authorization': 'Bearer ' + api_key}
-api_endpoint = 'https://nubela.co/proxycurl/api/linkedin/profile/resolve'
+api_endpoint = 'https://nubela.co/proxycurl/api/v2/linkedin'
 params = {
-    'company_domain': 'gatesfoundation.org',
-    'first_name': 'Bill',
-    'similarity_checks': 'include',
-    'enrich_profile': 'enrich',
-    'location': 'Seattle',
-    'title': 'Co-chair',
-    'last_name': 'Gates',
+    'twitter_profile_url': 'https://x.com/johnrmarty/',
 }
 response = requests.get(api_endpoint,
                         params=params,

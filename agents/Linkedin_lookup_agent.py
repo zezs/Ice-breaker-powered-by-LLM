@@ -40,5 +40,8 @@ def lookup(name: str)-> str:
 
 
 if __name__ == "__main__":
-    linkedin_url = lookup(name="Eden Marco")
-    print(linkedin_url)
+    # linkedin_url = lookup(name="Eden Marco")
+    # print(linkedin_url)
+
+    print("Looking up for the person information on the web...")
+    

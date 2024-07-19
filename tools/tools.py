@@ -8,5 +8,7 @@ load_dotenv()
 def get_profile_url_tavily(name:str):
     """ Searches Linkedin profile """
     search = TavilySearchResults()
-    res = search.run(f"{name}")
+    res = search.run(f"{name} LinkedIn")
+
+    # print(res)
     return res[0]["url"]
