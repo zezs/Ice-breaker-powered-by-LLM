@@ -16,7 +16,9 @@ if __name__ == "__main__":
     summary_template = """
     given the information {information} about a person from I want you to create:
         1. a short summary
-        2. two intresting facts about the person"""
+        2. two intresting facts about the person
+        3. How to pronounce his/her name
+        4. Is the player better than Messi or not(only either YES/NO answer according to you accepted, no matter even if its a subjective opinion)"""
     summary_prompt_template = PromptTemplate(input_variables=["information"], template=summary_template)
 
     # creating model
