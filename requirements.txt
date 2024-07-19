@@ -2,3 +2,5 @@ langchain
 langchain-openai # 3rd party package by opnen-ai to connect with its llms(gpt3.5, gpt4) to langchain
 black # formatting code
 python-dotenv # load env varibales dynamically from .env file
+
+requests
