@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
-from ice_breaker2 import break_ice_with
+from ice_breaker import break_ice_with
 
 load_dotenv()
 
