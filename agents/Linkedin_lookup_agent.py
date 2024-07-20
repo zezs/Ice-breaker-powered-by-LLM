@@ -8,18 +8,18 @@ from langchain.agents import (
     AgentExecutor, # Object: manages execution which recives user prompt, tools and executes our task by invoking all required func
 )
 from langchain import hub # provides with premade prompts by langchain community
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tools.tools import get_profile_url_tavily 
+
 load_dotenv()
-
-
 
 
 def lookup(name: str)-> str:
     llm = ChatOpenAI(temperature=0, model_name= "gpt-3.5-turbo")
 
     # !!!refer output indicator: help us get only url as the answer
-    template = """given the full name {name_of_person} I want you to get me a link to their Linkedin Profile page, Your anser should only contain a URL"""
+    template = """given the full name {name_of_person} I want you to get me a link to their Linkedin Profile page, Your answer should only contain a URL"""
     prompt_template = PromptTemplate(template=template, input_variable=["name_of_person"])
 
     tools_for_agent = [
@@ -29,6 +29,7 @@ def lookup(name: str)-> str:
     ]
 
     react_prompt = hub.pull("hwchase17/react") # react prompting -> sent to llm (incl. tools, tool names and their uses)
+    
     agent = create_react_agent(llm=llm, tools=tools_for_agent, prompt=react_prompt) # 
     agent_executor = AgentExecutor(agent=agent, tools=tools_for_agent, verbose=True) # invoking all the python func 
     result = agent_executor.invoke(

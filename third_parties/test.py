@@ -12,3 +12,4 @@ params = {
 response = requests.get(api_endpoint,
                         params=params,
                         headers=headers)
+

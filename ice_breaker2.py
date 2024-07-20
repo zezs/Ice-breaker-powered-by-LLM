@@ -16,14 +16,14 @@ def break_ice_with(keywords:str) -> str:
 
     print("Scraping data from Linkedin Profile....")
     linkedin_data = scrape_linkedin_profile(linkedin_url)
-    print("Scrapped Data:", linkedin_data)
+    # print("Scrapped Data:", linkedin_data)
 
     summary_template = """
     given the information {information} about a person from I want you to create:
         1. a short summary
         2. Profile pic url
         2. two intresting facts about the person
-        3. How to pronounce his/her name
+        3. How to pronounce the name
         """
     summary_prompt_template = PromptTemplate(input_variables=["information"], template=summary_template)
 
@@ -40,5 +40,5 @@ def break_ice_with(keywords:str) -> str:
 
 if __name__ == "__main__":
     print("Welcome to Ice breaker powered by Generative AI.....")
-    break_ice_with(keywords="Bill Gates")
+    break_ice_with(keywords="Abir Banerjee GRAMONT")
    
