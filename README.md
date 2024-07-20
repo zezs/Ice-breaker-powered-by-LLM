@@ -10,7 +10,6 @@ Ice Breaker is a comprehensive fullstack application powered by generative AI. I
 ## Topics covered and Learned
 Langchain | LLMs | Geneartive-AI | Python | Prompt Enginerring | Chain of thoughts | ReAct Agents | Agents | Tools | Web scrapping and Crawling | Flask | HTML/CSS |
 
-- **Flask Backend:** Serves as the backbone of the application, handling HTTP requests, API interactions, and serving dynamic content using Jinja2 templating.
 
 ## Components
 
