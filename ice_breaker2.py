@@ -1,15 +1,17 @@
+from typing import Tuple
+
 from dotenv import load_dotenv
 from langchain.prompts.prompt import PromptTemplate
 from langchain_openai import ChatOpenAI
 import os
 from agents.Linkedin_lookup_agent import lookup as linkedin_lookup_agent
 from third_parties.linkedin import scrape_linkedin_profile 
-from output_parsers import summary_parser
+from output_parsers import summary_parser, Summary
 
 load_dotenv()
 
 
-def break_ice_with(keywords:str) -> str:
+def break_ice_with(keywords:str) -> Tuple[Summary, str]:
     
     print("Extracting URL...")
     linkedin_url = linkedin_lookup_agent(keywords)
@@ -31,7 +33,7 @@ def break_ice_with(keywords:str) -> str:
     summary_prompt_template = PromptTemplate(input_variables=["information"], 
                                             template=summary_template,
                                             partial_variables={"format_instructions": summary_parser.get_format_instructions()}
-                                            ) # get_format_instructions retrives pydantic schema and validates it aganist output aganist the schema
+                                            ) # get_format_instructions retrives pydantic schema and validates the output aganist the schema
 
     # creating model
     llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
@@ -42,10 +44,12 @@ def break_ice_with(keywords:str) -> str:
     #executing chain using invoke method and passing i/p parameter "information"
     res = chain.invoke(input={"information": linkedin_data})
     print(res)
-    print(type(res))
+    return res, linkedin_data.get("profile_pic_url")
+    
+    # print(type(res))
 
 
 if __name__ == "__main__":
     print("Welcome to Ice breaker powered by Generative AI.....")
-    break_ice_with(keywords="Abir Banerjee GRAMONT")
+    break_ice_with(keywords="Bill Gates")
    

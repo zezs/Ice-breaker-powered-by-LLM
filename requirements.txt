@@ -4,5 +4,5 @@ langchain-community
 langchainhub
 black # formatting code
 python-dotenv # load env varibales dynamically from .env file
-
 requests
+flask
