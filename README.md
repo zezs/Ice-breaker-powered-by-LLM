@@ -21,6 +21,13 @@ Python | Langchain | LLMs | Langsmith | Geneartive-AI | Prompt Enginerring | Cha
 
 - **Frontend:** Built with HTML and CSS, providing a user-friendly interface for interaction.
 
+
+## Future Scope
+
+- I have a front-end application built with HTML and CSS that I want to migrate to Streamlit.
+- Finally Deploy it on huggingFace and make it public
+- **Problem:** I've ran out of proxycurl credits and I have no money to buy extra credits LOL!, that's one reson why I'm nor looking forward to deploy the app 
+
 # Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
