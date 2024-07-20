@@ -21,3 +21,13 @@ Python | Langchain | LLMs | Langsmith | Geneartive-AI | Prompt Enginerring | Cha
 
 - **Frontend:** Built with HTML and CSS, providing a user-friendly interface for interaction.
 
+## Environment Variables
+To run this project, you will need to add the following environment variables to your .env file
+
+PYTHONPATH=/{YOUR_PATH_TO_PROJECT}/ice_breaker
+
+OPENAI_API_KEY
+
+PROXYCURL_API_KEY
+
+TAVILY_API_KEY
