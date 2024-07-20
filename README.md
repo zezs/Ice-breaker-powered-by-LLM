@@ -8,7 +8,7 @@
 Ice Breaker is a comprehensive fullstack application powered by generative AI. It crawls the web to find a person's LinkedIn profile and utilizes the LangChain library to craft engaging ice breakers based on their history. LangChain ReAct (Reasoning Action) agents are employed to ensure the accurate return of the LinkedIn profile URL and to clean tokens in the resulting JSON data. The output from the LLM is parsed using LangChain's output parser to identify four key components from the JSON file: a summary, two intriguing facts, topics of interest, and two crafted ice breakers. The frontend is created with static HTML/CSS, while Flask is used for the backend development.
 
 ## Topics covered and Learned
-Langchain | LLMs | Geneartive-AI | Python | Prompt Enginerring | Chain of thoughts | ReAct Agents | Agents | Tools | Web scrapping and Crawling | Flask | HTML/CSS |
+Python | Langchain | LLMs | Langsmith | Geneartive-AI | Prompt Enginerring | Chain of thoughts | Agents | ReAct Agents | Tools | Web scrapping and Crawling | Flask | HTML/CSS | Output Parser | Proxycurl | Tavily Web API |
 
 
 ## Components
